@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questionnaire with Search</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 20px;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .box {
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .question {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .answer {
+        margin-top: 5px;
+    }
+    .search-bar {
+        margin-bottom: 20px;
+    }
+    #searchInput {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #cccccc;
+        margin-right: 10px;
+    }
+    #searchButton {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #searchButton:hover {
+        background-color: #45a049;
+    }
+</style>
+</head>
+<body>
+
+<script>
+    // Define the correct password
+    var correctPassword = "nobodyloveyou";
+
+    // Function to prompt user for password and grant access if correct
+    function checkPassword() {
+        var password = prompt("Please enter the password to access this website:");
+        if (password === correctPassword) {
+            document.getElementById('content').style.display = 'block';
+        } else {
+            alert("Incorrect password! Access denied.");
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = checkPassword;
+</script>
+
+<div id="content" style="display: none;">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="searchButton" onclick="searchFunction()">Search</button>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div class="question">Où habitent Mme Raquin, Camille et Thérèse avant de déménager ?</div>
+            <div class="answer">à Vernon</div>
+        </div>
+        <div class="box">
+            <div class="question">Où et quand se déroule l'action principale du roman ?
+
+(2 réponses)</div>
+            <div class="answer">A Paris</div>
+            <div class="answer">Au XIXe siècle</div>
+        </div>
+        <div class="box">
+            <div class="question">Quels sont les liens familiaux qui unissent Thérèse, Camille et Mme Raquin ?
+
+(2 réponses)</div>
+            <div class="answer">Mme Raquin est la tante de Thérèse</div>
+            <div class="answer">Thérèse est adoptée par Mme Raquin</div>
+        </div>
+        <div class="box">
+            <div class="question">Où travaillent Thérèse et Mme Raquin ?</div>
+            <div class="answer">Dans une mercerie<sub>2</sub>O</div>
+        </div>
+        <div class="box">
+            <div class="question">Quel est le métier de Camille ?</div>
+            <div class="answer">Employé dans l'administration d'un chemin de fer</div>
+        </div>
+        <div class="box">
+            <div class="question">Qu'est-ce qui est organisé tous les jeudis soirs chez les Raquin ?</div>
+            <div class="answer">Des parties de domino</div>
+        </div>
+        <div class="box">
+            <div class="question">Quand elle emménage dans sa nouvelle maison, Thérèse mène une vie plutôt...</div>
+            <div class="answer">monotone</div>
+        </div>
+        <div class="box">
+            <div class="question">Où est comment Camille et Laurent se sont-ils rencontrés ?
+
+(2 réponses)</div>
+            <div class="answer">Ils sont anciens camarades de classe</div>
+            <div class="answer">Camille invite Laurent à dîner le jeudi soir</div>
+        </div>
+        <div class="box">
+            <div class="question">Quand et pourquoi Thérèse et Laurent se rapprochent-ils ?
+
+(2 réponses)</div>
+            <div class="answer">Pendant qu'ils sont seuls dans la chambre</div>
+            <div class="answer">Ils y voient un intérêt mutuel</div>
+        </div>
+        <div class="box">
+            <div class="question">Combien de temps et comment se voient-ils en secret ?
+
+(2 réponses)</div>
+            <div class="answer">8 mois</div>
+            <div class="answer">Dans la chambre de Thérèse</div>
+        </div>
+        <div class="box">
+            <div class="question">Pour quelle raison décident-ils de tuer Camille ?</div>
+            <div class="answer">Pour se voir librement</div>
+        </div>
+        <div class="box">
+            <div class="question">Où et comment se déroule le meurtre ?
+
+(2 réponses)</div>
+            <div class="answer">Dans la campagne, à Saint-Ouen</div>
+            <div class="answer">Laurent étrangle puis noie Camille</div>
+        </div>
+        <div class="box">
+            <div class="question">Quelles tactiques adoptent Thérèse et Laurent pour se marier ?
+
+(2 réponses)</div>
+            <div class="answer">Laurent réduit les visites</div>
+            <div class="answer">Thérèse feint d'être morne et désespérée</div>
+        </div>
+        <div class="box">
+            <div class="question">Une fois mariés, Laurent et Thérèse vont mal car...
+
+(2 réponses)</div>
+            <div class="answer">Laurent souffre d'une cicatrice</div>
+            <div class="answer">Les amants sont hantés par la vision du mort</div>
+        </div>
+        <div class="box">
+            <div class="question">Que fait Laurent pour tenter d'oublier ce meurtre ?</div>
+            <div class="answer">Il loue un atelier de peinture</div>
+        </div>
+        <div class="box">
+            <div class="question">Que fait Thérèse de son côté ?</div>
+            <div class="answer">Elle se cherche de nouveaux amants</div>
+        </div>
+        <div class="box">
+            <div class="question">Qui est François et quel rôle joue-t-il dans le roman ?</div>
+            <div class="answer">C'est le chat de Mme Raquin qui observe les amants</div>
+        </div>
+        <div class="box">
+            <div class="question">Qu'arrive-t-il à François à la fin du roman ? Pourquoi ?</div>
+            <div class="answer">Il est tué par Laurent, dans un accès de folie.</div>
+        </div>
+        <div class="box">
+            <div class="question">Après la mort de Camille, Mme Raquin devient...
+
+(2 réponses)</div>
+            <div class="answer">Muette</div>
+            <div class="answer">Paralysée</div>
+        </div>
+        <div class="box">
+            <div class="question">Comment se termine l'oeuvre ? (2 réponses)</div>
+            <div class="answer">Les amants veulent s'assassiner puis se suicident</div>
+            <div class="answer">Mme Raquin est satisfaite</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function searchFunction() {
+        var searchText = document.getElementById('searchInput').value.toLowerCase();
+        var boxes = document.querySelectorAll('.box');
+
+        boxes.forEach(function(box) {
+            var questionText = box.querySelector('.question').textContent.toLowerCase();
+            var answerText = box.querySelector('.answer').textContent.toLowerCase();
+            if (questionText.includes(searchText) || answerText.includes(searchText)) {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
